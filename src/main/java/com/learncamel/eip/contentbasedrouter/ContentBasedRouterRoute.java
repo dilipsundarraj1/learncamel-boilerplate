@@ -16,7 +16,7 @@ public class ContentBasedRouterRoute extends RouteBuilder {
                 .to("file:json");
 //                .otherwise()
 //                .to("file:other")
-                //.to("file:other").stop()
+                //.to("file:other").stop() Will prevent "other" files from being pushed to all
 //                .end()
 //                .to("file:all");
     }
