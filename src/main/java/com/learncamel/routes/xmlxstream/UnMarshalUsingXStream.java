@@ -17,7 +17,7 @@ public class UnMarshalUsingXStream extends RouteBuilder {
         xStreamDataFormat.setAliases(aliases);
         xStreamDataFormat.setPermissions(Employee.class.getName());
 
-        from("direct:xmlInput")
+        from("direct:xmlIn put")
                 .unmarshal(xStreamDataFormat)
                 .to("log:?level=INFO&showBody=true")
                 .to("mock:output");
